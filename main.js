@@ -1,4 +1,9 @@
+Number.prototype.toTimeConvert = function(){
+    const number = this;
+    const hours = Math.floor(number / 3600);
+    const minutes = Math.floor((number - (hours * 3600) / 60));
 
+}
 const app = new Vue({
     el: "#app",
     data: {
@@ -63,13 +68,13 @@ const app = new Vue({
             return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
         },
         toTime: function(number){
+            n = parseInt(number, 10);
+            
             let seconds = number
             const days = Math.floor(seconds / (3600 * 24));
             seconds -= days * 3600 * 24;
             const hours = Math.floor(seconds / 3600);
             second -= hours * 3600;
-            
-
         }
         
     }
