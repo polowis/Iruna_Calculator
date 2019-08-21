@@ -68,7 +68,7 @@ const app = new Vue({
             return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
         },
         toTime: function(number){
-            n = parseInt(number, 10);
+            let n = 10;
             
             let seconds = number
             const days = Math.floor(seconds / (3600 * 24));
@@ -84,5 +84,20 @@ const app = new Vue({
 
 
 
+class Class{
+    constructor(name){
+        this.name = name;
+    }
+    getClassName(){
+        return this.name;
+    }
+
+}
+
+class Paladin extends Class{
+    constructor(){
+        super();
+    }
+}
 
 
